@@ -1,6 +1,5 @@
 const Mongoose = require('mongoose')
 const paginate = require('mongoose-paginate-v2')
-const bycrypt = require('bycrypt')
 const { UserStatus } = require('../../constants')
 
 const UserSchema = new Mongoose.Schema(
@@ -37,10 +36,6 @@ const UserSchema = new Mongoose.Schema(
     timestamps: true
   }
 )
-
-UserSchema.methods.matchPassword = async function (password) {
-  return await bycrypt.compare(password, this.password)
-}
 
 UserSchema.plugin(paginate)
 const User = Mongoose.model('User', UserSchema)

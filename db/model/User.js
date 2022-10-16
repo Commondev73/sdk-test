@@ -89,15 +89,6 @@ const findById = async (id) => {
   }
 }
 
-const matchPassword = async (password) => {
-  try {
-    return await User.matchPassword(password)
-  } catch (error) {
-    console.log(error)
-    return false
-  }
-}
-
 module.exports = {
   getList,
   create,
@@ -106,6 +97,5 @@ module.exports = {
   aggregate,
   find,
   findOne,
-  findById,
-  matchPassword
+  findById
 }
