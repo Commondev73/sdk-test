@@ -1,0 +1,27 @@
+{
+  "name": "sdk-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Commondev73/sdk-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Commondev73/sdk-test/issues"
+  },
+  "homepage": "https://github.com/Commondev73/sdk-test#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "moment": "^2.29.4",
+    "mongoose": "^6.6.5",
+    "mongoose-paginate-v2": "^1.7.1",
+    "randomstring": "^1.2.2"
+  }
+}
