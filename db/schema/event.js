@@ -27,7 +27,6 @@ const EventSchema = new Mongoose.Schema(
     adminId: {
       type: Mongoose.Schema.Types.ObjectId,
       ref: 'admin',
-      required: true
     }
   },
   {
