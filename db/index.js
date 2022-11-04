@@ -1,3 +1,4 @@
 module.exports = {
-  User: require('./model/User')
+  User: require('./model/User'),
+  Admin: require('./model/Admin')
 }
