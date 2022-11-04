@@ -1,5 +1,6 @@
 const { mapValues } = require('lodash')
 const Event = require('../schema/event')
+const { RemoveFieldsFromPopulate } = require('../../constants')
 
 const getList = async (query = {}, page = 1, limit = 10, sort = { createdAt: -1 }) => {
   try {
@@ -82,7 +83,12 @@ const findOne = async (query) => {
 const findById = async (id) => {
   try {
     const query = { _id: id }
-    return await Event.findOne(query)
+    return await Event.findOne(query).populate([
+      {
+        path: 'adminId',
+        select: RemoveFieldsFromPopulate
+      }
+    ])
   } catch (error) {
     console.log(error)
     return null

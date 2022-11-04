@@ -23,6 +23,11 @@ const EventSchema = new Mongoose.Schema(
     limit: {
       type: Number,
       required: true
+    },
+    adminId: {
+      type: Mongoose.Schema.Types.ObjectId,
+      ref: 'admin',
+      required: true
     }
   },
   {
